@@ -1,0 +1,155 @@
+[
+  {
+    "id": "c00",
+    "name": "running/jogging",
+    "intensity": "high",
+    "description": "Good old fashion running. The simplest way to burn calories and get heart pumping. Can be done outside, in the gym or at home on a tredmill",
+    "gym_required": false,
+    "directions": "Just run!",
+    "avgCalBurn": 500,
+    "variations": [
+      {
+        "name": "Outside Jog",
+        "description": "life is too short not to enjoy the Great Outdoors! Go for a run or jog outside!"
+      },
+      {
+        "name": "Tredmill Jog",
+        "description": "Too cold or too hot outside? Just go for a run on a tredmill at home or at your local gym!"
+      }
+    ]
+  },
+  {
+    "id": "c01",
+    "name": "Walking",
+    "intensity": "low/medium",
+    "description": "Simply walking can be great excercise! Walking is a great way to warm up, or to burn calories over the course of a workout!",
+    "gym_required": false,
+    "directions": "Walk it out!",
+    "avgCalBurn": 240,
+    "variations": [
+      {
+        "name": "Outside/nature walk",
+        "description": "life is too short not to enjoy the Great Outdoors! Go for a walk outside and enjoy nature, the city, or wherever you are!",
+        "outdoor": true,
+        "indoor": false, 
+        "gym": false
+      },
+      {
+        "name": "Tredmill walk",
+        "description": "Weather not co-operating? Fear not, you can always walk on a tredmill at home or at your local gym!",
+        "outdoor": true,
+        "indoor": false, 
+        "gym": true
+      }
+    ]
+  },
+  {
+    "id": "c02",
+    "name": "hiking",
+    "intensity": "medium/high",
+    "description": "Hiking is a long, vigorous walk, usually on trails or footpaths. If you love nature or are adventurous, this is a great choice for you!",
+    "gym_required": false,
+    "directions": "Make sure you take the proper safety precautions and have proper equiptment! Enjoy a walk along a trail or nature path!",
+    "avgCalBurn": 400,
+    "variations": [],
+    "outdoor": true, 
+    "indoor": false, 
+    "gym": false
+    
+  },
+  {
+    "id": "c03",
+    "name": "cycling",
+    "intensity": "high",
+    "description": "Wiki: Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport.Can also be done in the gym or at home on an excercise bike",
+    "gym_required": false,
+    "directions": "Make sure you take the proper safety precautions and always wear a helmet! Get on a bike and have fun!",
+    "avgCalBurn": 600,
+    "variations": [
+      {
+        "name": "Casual biking",
+        "description": "Just casually riding a bike!",
+        "outdoor": true,
+        "indoor": false
+      },
+      {
+        "name": "BMX biking",
+        "description": "Ride in style and learn cool tricks!",
+        "outdoor": true,
+        "indoor": false
+        
+      },
+      {
+        "name": "Mountain biking",
+        "description": "Wiki: Mountain biking is a sport of riding bicycles off-road, often over rough terrain, usually using specially designed mountain bikes.",
+        "outdoor": true,
+        "indoor": false
+      }
+    ]
+  },
+  {
+    "id": "c04",
+    "name": "skateboarding/ longboarding",
+    "intensity": "medium",
+    "description": "Wiki:Skateboarding is an action sport that involves riding and performing tricks using a skateboard, as well as a recreational activity, an art form, an entertainment industry job, and a method of transportation",
+    "gym_required": false,
+    "directions": "Make sure you take the proper safety precautions and always wear a helmet and pads!",
+    "avgCalBurn": 350,
+    "variations": [
+      {
+        "name": "street/vert skateboarding",
+        "description": "Wiki: Street skateboarding is a skateboarding discipline which focuses on flatground tricks, grinds, slides and aerials within urban environments and public spaces/n Wiki: Vert skateboarding, short for vertical skateboarding, is the act of riding a skateboard on a skate ramp or other incline and involves the skateboarder transitioning from the horizontal plane to the vertical plane in order to perform skateboarding tricks ",
+        "outdoor": true,
+        "indoor": false
+      },
+      {
+        "name": "Longboarding/Pennyboarding",
+        "description": "Wiki:Longboarding is riding on a longboard. Longboards vary in shape and size. Compared to skateboards, longboards are more stable, and have more traction and durability due to larger wheel size and lower wheel durometers. Penny boards are a type of compact, extra small longboard",
+        "outdoor": true,
+        "indoor": false
+      }
+      
+    ]
+  },
+  {
+    "id": "c06",
+    "name": "Ball Sports",
+    "intensity": "High",
+    "description": "Sports like Basketball, Soccer, Football, , etc are great forms of excercise!",
+    "gym_required": false,
+    "directions": "Plenty of sports to chose from!",
+    "avgCalBurn": 600,
+    "variations": [
+      {
+        "name": "Basketball",
+        "description": "Wiki: Basketball is a team sport in which two teams, most commonly of five players each, opposing one another on a rectangular court, compete with the primary objective of shooting a basketball through the defender's hoop. Can be played outside on an outdoor court or indoors on a basketball court as well!",
+        "outdoor": true,
+        "indoor": true
+      },
+      {
+        "name": "Soccer",
+        "description": "Wiki: Soccer (also known as football) is a team sport played with a spherical ball between two teams of 11 players. Mostly played outdoors but can also be played on an indoor field",
+        "outdoor": true,
+        "indoor": true
+      },
+      {
+        "name": "Volleyball",
+        "description": "Wiki: Volleyball is a team sport in which two teams of six players are separated by a net. Each team tries to score points by grounding a ball on the other team's court under organized rules. Can be played on an indoor court or you can play beach voleyball outside!",
+        "outdoor": true,
+        "indoor": true
+      },
+      {
+        "name": "Football",
+        "description": "Football can be a lot of fun. Get together with some friends and have a nice game of flag/touch football or if you have the equiptment, American/Canadian football!",
+        "outdoor": true,
+        "indoor": false
+      },
+      {
+        "name": "Hockey",
+        "description": "Wiki: Hockey is a sport in which two teams play against each other by trying to manoeuvre a ball or a puck into the opponent's goal using a hockey stick. There are many types of hockey such as bandy, field hockey, ice hockey and rink hockey.",
+        "outdoor": true,
+        "indoor": true
+      }
+    ]
+  }
+]

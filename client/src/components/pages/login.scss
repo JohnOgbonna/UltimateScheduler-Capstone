@@ -1,0 +1,123 @@
+@use '../partials/mixins' as *;
+@use '../partials/variables' as *;
+
+.login {
+  color: $themeDark;
+  margin: 1rem;
+  font-family: customHeader;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  box-shadow: 5px 5px 8px 5px rgba(19, 24, 44, 0.2); 
+  border: 1px solid white; 
+  padding-bottom: 32px; 
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 100vh;
+  @include tablet{ 
+    margin: 0 12% 0 12%;
+}
+  @include desktop{ 
+    margin: 0 20% 0 20%;
+}
+
+}
+#loginsection {
+  background-color: $themebackground;
+  padding: 0 .7rem 1rem .7rem;
+  border-radius: 10px;
+  border: 1px solid $themeDark;
+  box-shadow: 5px 5px 8px 5px rgba(19, 24, 44, 0.2); 
+  max-width: 500px; 
+  width: 80%;
+  @include tablet{ 
+      max-width: 700px;
+      width: 70%;
+  } 
+  
+  
+}
+.header {
+  text-align: center;
+  font-family: customHeader;
+  &__sub {
+    text-align: center;
+    font-family: customHeader;
+  }
+}
+.loginbox {
+    display: flex;
+  justify-content: center;
+  font-family: customHeader;
+  width: fit-content;
+  margin-bottom: 12px; 
+  width: 100%;
+  align-items: center;
+
+&__username {
+  display: flex; 
+
+  &-label{ 
+    min-width: 80px; 
+    font-size: .9rem;
+    
+} 
+
+} 
+&__button{ 
+    height: 1.6rem; 
+    border-radius: 20px;
+    font-family: customHeader; 
+    background: $themePurple;
+    color: white;
+    min-width: 80px;
+}
+
+&__input { 
+    border-radius: 20px;
+    border: 1px solid $themePurple;
+    padding: 2px 8px; 
+    font-family: customHeader; 
+    width: 120%;
+   
+    &:focus{ 
+        outline: none;
+        border: 2px solid rgb(134, 47, 134);
+    }
+}  
+ &__button{ 
+     align-self: center
+ }
+} 
+.logins { 
+    display: flex; 
+    align-items: center; 
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%; 
+    
+} 
+.linktoSignup{ 
+    color: rgb(134, 47, 134);
+    &:hover{ 
+        text-decoration: underline;
+    }
+} 
+
+.signupform{ 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+} 
+.signuphere{ 
+    font-size: 1rem; 
+    @include tablet{ 
+        width: 70%;
+    }
+} 
+#loginsection .signuphere{ 
+    @include tablet{ 
+        width: 100%;
+    }
+}

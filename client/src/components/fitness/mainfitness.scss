@@ -1,0 +1,238 @@
+@use '../partials/mixins' as *;
+@use '../partials/variables' as *; 
+
+
+.mainfitness{ 
+    padding: 2rem 1rem; 
+    margin: 1rem;
+    color: $themeDark;
+    border: 1px solid white;
+    box-shadow: 5px 6px 3px 10px rgba(19, 24, 44, 0.2); 
+    @include tablet{ 
+        margin: 1rem 10% 1rem 10%; 
+    }  
+    @include desktop{ 
+        margin: 1rem 20% 1rem 20%; 
+    } 
+    
+
+    &__line1{ 
+        
+        @include tablet{
+        display: flex; 
+        max-height: 40vh;
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        padding: 5%;
+        } 
+        @include desktop{ 
+            margin: 1rem 5%;
+        }
+        
+    }
+}
+.activities{ 
+    box-shadow: 5px 2px 3px 3px rgba(19, 24, 44, 0.2);
+    border-radius: 10px; 
+    margin-bottom: 1rem;
+    padding-top: 0px;
+    padding-bottom: .5rem;
+    background-color: $themePink; 
+    margin-right: 6%;
+
+    @include tablet{ 
+        width: 42%;
+        max-height: 30vh;
+        overflow: scroll;
+    }
+
+    &__line1{ 
+        display: flex; 
+        flex-direction: row-reverse;
+        align-items: center ;
+        justify-content: center;
+        color: white; 
+        
+    }  
+    
+
+
+    &__image{ 
+        width: 24px; 
+        height: 24px;
+        margin-right: .6rem;
+    }
+    
+}
+.excercises{ 
+
+    &__box{ 
+        border: 1px solid rgb(124, 123, 124); 
+        box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+        margin: 0 1rem 1rem 1rem;
+        border-radius: 10px; 
+        background-color: #f1ecef;
+        padding: 0 1rem; 
+        overflow: hidden;
+      
+
+        &-line1{ 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        } 
+        &-imagetrue, &-imagefalse, &-imageundefined{ 
+            height: 1rem; 
+            width: 1rem;
+            margin-left: .6rem;
+            transition: .3s;
+        } 
+        &-imagefalse, &-imageundefined{
+            transform: rotate(-90deg); 
+    }
+} 
+} 
+.water{ 
+    box-shadow: 5px 2px 3px 3px rgba(19, 24, 44, 0.2);
+    border-radius: 10px; 
+   border: 1px solid white; 
+    border-radius: 10px; 
+    margin-bottom: 1rem;
+    background-color: #f1ecef; 
+    @include tablet{ 
+        width: 42%; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__line1{ 
+        display: flex; 
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        background-color: $themePink;
+        border-radius: 10px;
+        color: white;
+    } 
+    &__image{ 
+        height: 24px; 
+        width: 24px; 
+        margin-right: 10px;
+    }
+    &__icons{ 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        padding-bottom: 1rem;
+        justify-self: end;
+        &-icon{ 
+            height: 24px; 
+            width: 24px;
+            margin-left: 2rem;
+        }
+    } 
+    &__description{ 
+        padding: 1rem 1rem 1rem 1rem; 
+        background-color: #f1ecef;
+        margin-top: 0;
+    }
+} 
+
+.week{ 
+    border: 1px solid white;
+    box-shadow: 5px 2px 3px 3px rgba(19, 24, 44, 0.2);
+    border-radius: 10px; 
+
+    margin-bottom: 1rem;
+    padding: 0 1rem 0rem 1rem;
+    background-color:$themePink; 
+    @include tablet{ 
+        margin: 1rem 5%;
+    } 
+    @include desktop{ 
+        margin: 1rem 10%;
+    }
+    &__line1{ 
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        margin: 1rem 0; 
+        color: white;
+        
+    }  
+    &__Header{ 
+        margin: 0;
+    }
+    &__image{ 
+        height: 24px; 
+        width: 24px; 
+        margin-right: 10px;
+    }
+    &__imagetrue, &__imagefalse, &__imageundefined{ 
+        height: 16px; 
+        width: 16px; 
+        margin-right: 10px;
+        margin-left: .6rem;
+        transition: .3s; 
+        fill: white;
+    } 
+    &__imagefalse, &__imageundefined{
+        transform: rotate(-90deg); 
+}
+} 
+.weekActivities{ 
+    background-color: #f1ecef;
+    border: 1px solid white; 
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 5px; 
+    margin-bottom: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    @include tablet{ 
+        display: flex; 
+        flex-wrap: wrap;
+
+    }
+    &__line1{ 
+       
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        border: 1px solid white;
+        border-radius: 10px; 
+        
+    } 
+    &__box{ 
+    border: 2px solid white; 
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 5px; 
+    margin-bottom: 1rem;
+    background-color: white; 
+    border-radius: 10px;
+
+    @include tablet{ 
+        width: 46%; 
+        &:nth-child(2n-1){ 
+            margin-right: 5%;
+        }
+    }
+    }
+  
+    &__imagetrue, &__imagefalse, &__imageundefined{ 
+        height: 16px; 
+        width: 16px; 
+        margin-right: 10px;
+        margin-left: .6rem;
+        transition: .3s;
+    } 
+    &__imagefalse, &__imageundefined{
+        transform: rotate(-90deg); 
+}
+} 
+.activitybox{ 
+    &__name{ 
+        text-align: center; 
+        font-size: .8rem; 
+        font-weight: bold;
+    }
+}

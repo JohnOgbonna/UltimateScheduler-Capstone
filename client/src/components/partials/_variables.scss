@@ -1,0 +1,20 @@
+$breakpoint-tablet: 768px;
+$breakpoint-large-tablet: 1068px;
+$breakpoint-desktop: 1280px;
+
+$themePink: #af254e; 
+$themeDark: #52317e; 
+$themePurple: #44318d; 
+$themeLightPurple: #E98074; 
+$themeGreen: #a4b6b5; 
+$themebackground: #f1ecef; 
+$themeGreen2: #49a086; 
+
+@font-face{ 
+    src: url(../assets/RussoOne-Regular.ttf); 
+    font-family: customFitnessHeader;
+} 
+@font-face{ 
+    src: url(../assets//SecularOne-Regular.ttf); 
+    font-family: customHeader;
+}

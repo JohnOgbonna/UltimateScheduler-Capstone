@@ -1,0 +1,14 @@
+[
+    {
+        "id": "gb00", 
+        "name": "Lat Pulldowns" ,
+        "description": "The pulldown exercise is a strength training exercise designed to develop the latissimus dorsi muscle. It performs the functions of downward rotation and depression of the scapulae combined with adduction and extension of the shoulder joint.", 
+        "directions&variations": "https://www.bodybuilding.com/fun/schultz54.htm, https://www.bodybuilding.com/content/5-lat-pull-down-variations-for-an-impressive-physique.html" 
+    },  
+    {
+        "id": "gb01", 
+        "name": "Seated Rows",
+        "description": "Wiki:  an exercise where the purpose is to strengthen the muscles that draw the rower's arms toward the body (latissimus dorsi) as well as those that retract the scapulae (trapezius and rhomboids) and those that support the spine ", 
+        "directions&variations": "https://www.bodybuilding.com/content/exercise-of-the-week-seated-cable-rows.html" 
+    }
+]
