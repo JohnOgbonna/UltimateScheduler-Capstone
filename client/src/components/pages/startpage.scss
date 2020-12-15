@@ -28,6 +28,9 @@ a{
     border-radius: 10px;
     background-color: $themePink;
     color: white;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
         &:hover{ 
             transform: scale(1.1); 
             z-index: 3; 
@@ -61,7 +64,7 @@ a{
         background-color: $themebackground;
         color:$themeDark; 
         height: 2rem; 
-        padding: .5rem 0 ; 
+        padding: .5rem 1rem ; 
         border-radius: 10px; 
         text-align: center; 
         height: fit-content;

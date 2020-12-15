@@ -22,7 +22,10 @@ class App extends Component {
   login = (username, userid) =>{ 
     this.setState({ 
       login: true, 
-    });
+      username: username, 
+      userid: userid
+    }); 
+   
   }
   logout = () =>{ 
 
@@ -40,11 +43,11 @@ class App extends Component {
     this.setState({ popup: !this.state.popup });
   };
   render() {
+    console.log(this.state.username, this.state.u)
     var weekInMilliseconds = 6 * 24 * 60 * 60 * 1000;
     var nextWeek = new Date().getTime() + weekInMilliseconds;
     const options = { weekday: 'long', month: 'long', day: 'numeric' }
     console.log(new Date(nextWeek)); 
-    console.log(this.props.match.params)
     return (
       <Router>
       <div className="App">
@@ -67,7 +70,7 @@ class App extends Component {
             />
           ) : null}
           <Switch>
-        <Route path = '/' exact component  = {Login}/> 
+        <Route path = '/' exact><Login login = {this.login}/></Route> 
         <Route path = '/start/:username/:id' component  = {Startpage}/> 
         <Route path = '/fitness-signup/:username/:id' component = {FitnessSignup}/> 
         <Route path = '/planner/:weight/:muscle/:gym/:username/:id' component = {ExcercisePlanner}/>

@@ -27,6 +27,7 @@ class StartPage extends Component{
 
             })
             console.log(res.data)
+
            
         }) 
         console.log(this.state.authenticated)
@@ -48,6 +49,7 @@ class StartPage extends Component{
                 console.log(err)
             }) 
             this.setState({checkedforprograms: true}) 
+            this.props.login(this.props.match.params.username, this.props.match.params)
             console.log(this.state.fitness)
         }
     }

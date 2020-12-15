@@ -21,8 +21,8 @@ class Login extends Component {
   submitSignup = (e) =>{ 
       e.preventDefault()
       let body = { 
-          username: e.target.Susername.value,
-          password: e.target.Spassword.value
+          username: e.target.username.value,
+          password: e.target.password.value
       }
       axios.post('http://localhost:7500/auth/register', body) 
       .then(res=>{ 
@@ -50,9 +50,10 @@ class Login extends Component {
         this.setState({
             username: res.data.username,
             userid: res.data.userid, 
-            
-
+       
+          
       }) 
+      this.props.login(this.state.username, this.state.userid)
       window.location.href = `start/${this.state.username}/${this.state.userid}`
     }) 
     .catch(err=>{ 
@@ -122,7 +123,7 @@ class Login extends Component {
                 <input
                   type="text"
                   className="loginbox__input"
-                  id="Susername"
+                  id="username"
                   placeholder="Enter Username" 
                   defaultValue={this.state.signupUser}
                   onChange={this.usernameOnchange}
@@ -135,7 +136,7 @@ class Login extends Component {
                 <input
                   type="password"
                   className="loginbox__input"
-                  id="Spassword"
+                  id="password"
                   placeholder="Enter Password"
                   defaultValue={this.state.signupPass}
                   onChange={this.passOnchange}
