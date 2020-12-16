@@ -1,6 +1,6 @@
 import { React, Component } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import "./navbar.scss"
 
 class Navbar extends Component {
   state = {
@@ -19,11 +19,13 @@ class Navbar extends Component {
       this.setState({ loggedin: true });
     }
   }
-  render() {
+  render() { 
+      
     return (
       <div className="navbar">
-        <div className="navbar__inner">
-          <h1 className="navbar__header">Ultimate Scheduler</h1>
+          <div className ="navbar__upper">
+          <Link to = {`main/${this.props.username}/${this.props.userid}`}><h1 className="navbar__header">Ultimate Scheduler</h1></Link>
+          <div className="navbar__inner">
           {this.state.username ? (
             <h2 className="navbar__user">{this.state.username}</h2>
           ) : (
@@ -32,18 +34,19 @@ class Navbar extends Component {
           {this.state.loggedin ? (
             this.state.fitness ? (
               <Link to={`/fitness/${this.state.username}/${this.state.userid}`}>
-                <p className="navbar__fitness">Fitness</p>
+                <p className="navbar__item">Fitness</p>
               </Link>
             ) : (
-              <p className="navbar__fitness">Fitness</p>
+                <Link to={`/start/${this.state.username}/${this.state.userid}`}><p className="navbar__item">Fitness</p></Link>
             )
           ) : null}
           {this.state.loggedin ? (
             <Link to="/">
-              <p className="navbar__logout">Logout</p>
+              <p className="navbar__item">Logout</p>
             </Link>
           ) : null}
         </div>
+      </div>
       </div>
     );
   }

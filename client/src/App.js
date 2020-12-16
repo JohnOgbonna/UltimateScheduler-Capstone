@@ -52,14 +52,14 @@ class App extends Component {
       <Router>
       <div className="App">
         <div>
-          <button
+          {/* <button
             className="calendarbutton"
             onClick={() => {
               this.setState({ showcalendar: !this.state.showcalendar });
             }}
           >
             SHOW CALENDAR
-          </button>
+          </button> */}
           {this.state.showcalendar ? (
             <Calendar
               onChange={this.onChange}

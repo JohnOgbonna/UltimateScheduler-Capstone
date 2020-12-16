@@ -29,7 +29,7 @@ class Login extends Component {
           console.log(res)
           this.setState({
               userid: res.data.userid, 
-              pass: res.data.password
+             username: res.data.username
 
         })
       }) 

@@ -14,6 +14,9 @@ a{
     font-family: customheader;
     color: $themeDark;
     background-color: $themebackground; 
+    z-index: 1; 
+    position: relative;
+    bottom: 150px;
     @include tablet{ 
         margin: 1rem 10%;
     } 

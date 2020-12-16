@@ -1,5 +1,6 @@
 import { React, Component } from "react";
 import Dropdown from "../../components/assets/drop-down-arrow.svg";
+import WhiteDropdown from "../../components/assets/white drop-down-arrow.svg";
 import axios from "axios";
 import "./excerciseplanner.scss";
 
@@ -43,7 +44,15 @@ class ExcercisePlanner extends Component {
       days.push(day);
     }
     return days;
-  };
+  }; 
+  findtruthy = (object) =>{ 
+    if(object){ 
+      return true
+    } 
+    else{ 
+      return false
+    }
+  }
 
   updateFitness = (day, activity, variation) => {
     let activitiesandDays = this.state.fitness.activitiesAndDays;
@@ -65,7 +74,8 @@ class ExcercisePlanner extends Component {
           outdoor: variation.outdoor,
         },
       });
-      activitiesandDays[activitiesandDays.indexOf(dayexists)] = appendtoDay;
+      activitiesandDays[activitiesandDays.indexOf(dayexists)] = appendtoDay; 
+      this.setState({[`${appendtoDay.day.toLocaleDateString()}-${variation.name}`]: !this.state[`${appendtoDay.day.toLocaleDateString()}-${variation.name}`]})
     } else {
       activitiesandDays.push({
         day: day,
@@ -82,7 +92,8 @@ class ExcercisePlanner extends Component {
             },
           },
         ],
-      });
+      }); 
+      this.setState({[`${day.toLocaleDateString()}-${variation.name}`]: !this.state[`${day.toLocaleDateString()}-${variation.name}`]})
 
       if (activitiesandDays.length > 1) {
         activitiesandDays = activitiesandDays.sort(
@@ -146,7 +157,7 @@ class ExcercisePlanner extends Component {
     const options = { weekday: "long", month: "long", day: "numeric" };
     return (
       <div className="planner">
-        {console.log(this.state.fitness.activitiesAndDays)}
+      <h1 className = "planner__header">Excercise Planner</h1>
         {this.props.match.params.weight === "true" ? (
           <div className="plansection">
             <h2 className="plansection__header">
@@ -162,7 +173,8 @@ class ExcercisePlanner extends Component {
                 <h2 className="selected__header">Selected Activities: </h2>
 
                 {this.state.fitness.activitiesAndDays.map((day) => {
-                  return (
+                  return ( 
+                    <div className = "lists">
                     <div className="listSelect">
                       <h3 className="listSelect__day">
                         {day.day.toLocaleDateString(undefined, options)}
@@ -176,6 +188,7 @@ class ExcercisePlanner extends Component {
                           </p>
                         );
                       })}
+                    </div>
                     </div>
                   );
                 })}
@@ -196,7 +209,7 @@ class ExcercisePlanner extends Component {
                       className={`plansection__image${
                         this.state[`day${index}`]
                       }`}
-                      src={Dropdown}
+                      src={WhiteDropdown}
                       onClick={() => {
                         this.setState({
                           [`day${index}`]: !this.state[`day${index}`],
@@ -250,7 +263,7 @@ class ExcercisePlanner extends Component {
                                 {excercise.variations.map((variation) => {
                                   return (
                                     <div
-                                      className="variationbox"
+                                      className={`variationbox${this.state[`${day.toLocaleDateString()}-${variation.name}`]}`}
                                       onClick={() =>
                                         this.updateFitness(
                                           day,

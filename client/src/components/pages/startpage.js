@@ -2,7 +2,8 @@ import {React, Component} from 'react'
 import Dropdown from '../../components/assets/drop-down-arrow.svg' 
 import axios from 'axios' 
 import {Link} from 'react-router-dom'
-import './startpage.scss'
+import './startpage.scss' 
+import Navbar from '../navBar/navbar'
 
 
 class StartPage extends Component{ 
@@ -49,7 +50,7 @@ class StartPage extends Component{
                 console.log(err)
             }) 
             this.setState({checkedforprograms: true}) 
-            this.props.login(this.props.match.params.username, this.props.match.params)
+         
             console.log(this.state.fitness)
         }
     }
@@ -57,9 +58,11 @@ class StartPage extends Component{
 
     render(){ 
        
+      
         if(this.state.authenticated){
-            console.log(this.state.fitness)
+        
         return( 
+            <div className = "body">  <Navbar username={this.props.match.params.username} userid ={this.props.match.params.id}/>
             <div className ="loggedin">
                 <h1 className ="loggedin__header">Welcome, {this.state.user}! </h1> 
                 
@@ -81,7 +84,7 @@ class StartPage extends Component{
                     <p className ="program_description">Comming 2021</p>
                    </div> 
                 
-
+                   </div>
                 </div>
             </div>
             
