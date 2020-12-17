@@ -2,6 +2,8 @@ import { React, Component } from "react";
 import { Link, useRouteMatch } from "react-router-dom"; 
 import axios from 'axios';
 import './fitness-signup.scss';
+import NavBar from '../navBar/navbar'
+
 
 class FitnessSignup extends Component {
   state = {
@@ -73,7 +75,7 @@ class FitnessSignup extends Component {
     if(this.state.authenticated){
     return(
       <div className="fitness">
-        <header> </header>
+      <NavBar username = {this.props.match.params.username} userid={this.props.match.params.id}/>
         <div className="query">
         <h1 className ='Query__header'>Lets get started!</h1>
           <form>

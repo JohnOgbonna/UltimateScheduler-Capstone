@@ -16,9 +16,10 @@ a{
     background-color: $themebackground; 
     z-index: 1; 
     position: relative;
-    bottom: 150px;
+    bottom: 130px;
     @include tablet{ 
         margin: 1rem 10%;
+        bottom: 150px;
     } 
     @include desktop{ 
         margin: 2rem 20%;

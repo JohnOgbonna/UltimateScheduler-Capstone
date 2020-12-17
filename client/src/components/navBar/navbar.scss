@@ -15,7 +15,8 @@
     box-sizing: border-box;
     z-index: 0; 
     align-content: center;
-    box-shadow: 5px 6px 3px 10px rgba(19, 24, 44, 0.2); 
+    box-shadow: 5px 6px 3px 10px rgba(19, 24, 44, 0.2);
+    box-sizing: border-box; 
     &__upper{ 
         display: flex; 
         justify-content: space-between; 
@@ -33,11 +34,15 @@
         font-size: 1.3rem;
         font-family: customFitnessHeader; 
         height: fit-content;
+       
         
     } 
     &__user{ 
         font-size: 1rem;
         vertical-align: middle;
+        @include tablet{
+        margin-right: 1rem;
+        }
     } 
     &__item{ 
         font-size: .8rem;

@@ -3,6 +3,8 @@ import Dropdown from "../../components/assets/drop-down-arrow.svg";
 import WhiteDropdown from "../../components/assets/white drop-down-arrow.svg";
 import axios from "axios";
 import "./excerciseplanner.scss";
+import NavBar from "../navBar/navbar"; 
+
 
 class ExcercisePlanner extends Component {
   state = {
@@ -156,6 +158,8 @@ class ExcercisePlanner extends Component {
     // var nextWeek = new Date().getTime() + weekInMilliseconds;
     const options = { weekday: "long", month: "long", day: "numeric" };
     return (
+      <div className ="body">
+        <NavBar username = {this.props.match.params.username} userid = {this.props.match.params.id} fitness= {this.state.fitness}/>
       <div className="planner">
       <h1 className = "planner__header">Excercise Planner</h1>
         {this.props.match.params.weight === "true" ? (
@@ -301,6 +305,7 @@ class ExcercisePlanner extends Component {
             </div>
           </div>
         ) : null}
+      </div>
       </div>
     );
   }

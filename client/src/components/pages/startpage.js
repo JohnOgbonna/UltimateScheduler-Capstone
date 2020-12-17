@@ -62,7 +62,7 @@ class StartPage extends Component{
         if(this.state.authenticated){
         
         return( 
-            <div className = "body">  <Navbar username={this.props.match.params.username} userid ={this.props.match.params.id}/>
+            <div className = "body">  <Navbar username={this.props.match.params.username} userid ={this.props.match.params.id} fitness={this.state.fitness}/>
             <div className ="loggedin">
                 <h1 className ="loggedin__header">Welcome, {this.state.user}! </h1> 
                 

@@ -10,14 +10,16 @@
   color: $themeDark;
   font-family: customHeader;
   background-color: $themebackground;
-  position: relative; top: 16px;
+  position: relative; bottom: 130px;
   @include tablet{ 
       margin: 0 10%;
   }
   @include desktop{ 
       margin: 0 20%;
+      min-height: 100%;
   }
   &__header {
+   
     font-size: 1.5rem;
     margin-top: 1.5rem;
    
@@ -26,6 +28,7 @@
 .selected {
   border: 2px solid $themePink;
   padding: 0rem 0rem 1rem 0rem;
+  border-top: 0;
   border-radius: 10px;
   &__header {
     font-size: 1.2rem;
@@ -79,6 +82,7 @@
     font-size: 0.9rem;
     text-align: left;
     font-weight: normal; 
+   
   }
   &__daybox {
     &-line1 {
@@ -89,6 +93,13 @@
     &-header {
       margin: 0;
       text-align: center;
+      height: fit-content; 
+      display:flex; 
+      align-items: center; 
+      font-size: 1rem; 
+      @include tablet{ 
+          font-size: 1rem;
+      }
     }
   }
   &__imagetrue,

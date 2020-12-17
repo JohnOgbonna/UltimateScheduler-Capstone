@@ -1,0 +1,25 @@
+Hello, Oni, Sam, or Haley (whoever is marking this), Welcome to Ultimate scheduler! Here are instructions on how to use the app
+
+This app is designed to help the user schedule cardio activities and help keep in shape. There will be many additions to this app in the future, so thanks for being the first to try the initial release!
+
+begin by starting the backend server, and then starting the client app 
+
+You will be taken to a login page. To begin, click the word "here" , where it says "Don't have an account? Sign Up HERE."
+
+Create a user name and password. Don't use Daniil as a user name as I already created that user as a test. Once you enter a user name and password, you will be able to login. Click the login button that appears when you make a user name and password. 
+
+You will be taken to the start page. Select the fitness program (the spending tracker is not yet created) 
+
+select Lose weight/ Keep active (musclegain program pending) and either yes or no to having access to a gym. No is checked off the bat, select it again or yes to move on to the next step 
+
+you are now at the Excercise planner. This page will let you select from activies to plan your week. Select the arrow at the right side of each day to drop down/ retract the list of activities. Click on variations to see each variations of activities and select the one you would like. Once selected, the choice will appear under "Selected activities". Select activities for any day within the week. 
+
+Please note that in this early build of the application, activites cannot be deselected. To restart selection, refresh the page. 
+
+Select next step when you are done chosing activities. (located at the bottom of "selected activities pannel) 
+
+You will now be taken to the main fitness page. In the "Todays Activities" pannel, click the arrow to see details about your activity. To the right of that, there is a water tracker that you can use to track how much water you drank throughout the day (It refreshes when the page is reloaded this will be fied in a later update). 
+
+To view activies for the week, select the arrow on the right of the pannel. It will provide a list of days you have activities scheduled for. Clicking each arrow will expand/ collapse the activity. 
+
+CONGRATULATIONS. You have successfully tested the early release of ULTIMATE SCHEDULER. You can click Logout to logout!

@@ -24,7 +24,7 @@ class Navbar extends Component {
     return (
       <div className="navbar">
           <div className ="navbar__upper">
-          <Link to = {`main/${this.props.username}/${this.props.userid}`}><h1 className="navbar__header">Ultimate Scheduler</h1></Link>
+          <Link to = {`/start/${this.state.username}/${this.state.userid}`}><h1 className="navbar__header">Ultimate Scheduler</h1></Link>
           <div className="navbar__inner">
           {this.state.username ? (
             <h2 className="navbar__user">{this.state.username}</h2>
