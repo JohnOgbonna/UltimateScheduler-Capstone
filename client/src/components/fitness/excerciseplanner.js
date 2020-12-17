@@ -170,7 +170,8 @@ class ExcercisePlanner extends Component {
 
             {this.state.fitness.activitiesAndDays !== [] ? (
               <div className="selected">
-                <h2 className="selected__header">Selected Activities: </h2>
+                <h2 className="selected__header">Selected Activities: </h2> 
+                <div className = "selectedwrapper">
 
                 {this.state.fitness.activitiesAndDays.map((day) => {
                   return ( 
@@ -191,13 +192,15 @@ class ExcercisePlanner extends Component {
                     </div>
                     </div>
                   );
-                })}
+                })} 
+                </div>
                 <button className="listSelect__button" onClick ={this.registerActivities}>Next Step</button>
               </div>
             ) : null}
-
+              <div className ="dayboxes">
             {this.ArrayofDays().map((day, index) => {
               return (
+               
                 <div
                   className={`plansection__daybox${this.state[`day${index}`]}`}
                 >
@@ -221,7 +224,8 @@ class ExcercisePlanner extends Component {
                     <div className="plansection__listbox">
                       <h4 className="plansection__listbox-header">
                         Cardio excercises:
-                      </h4>
+                      </h4> 
+                      <div className = "listboxes">
                       {this.state.cardioExcercises.map((excercise) => {
                         return (
                           //create and setstate so onclick can have a state link
@@ -246,8 +250,8 @@ class ExcercisePlanner extends Component {
                                 type="button"
                                 onClick={() =>
                                   this.setState({
-                                    [`select${excercise.id}`]: !this.state[
-                                      `select${excercise.id}`
+                                    [`select${excercise.id}${day.toLocaleDateString()}`]: !this.state[
+                                      `select${excercise.id}${day.toLocaleDateString()}`
                                     ],
                                   })
                                 }
@@ -255,10 +259,10 @@ class ExcercisePlanner extends Component {
                                 Variations
                               </button>
                             </div>
-                            {this.state[`select${excercise.id}`] ? (
+                            {this.state[`select${excercise.id}${day.toLocaleDateString()}`] ? (
                               <div className="listbox__variations">
                                 <h5 className="variationbox__select">
-                                  Select Variation
+                                  Select Variation:
                                 </h5>
                                 {excercise.variations.map((variation) => {
                                   return (
@@ -285,12 +289,16 @@ class ExcercisePlanner extends Component {
                             ) : null}
                           </div>
                         );
-                      })}
+                      })} 
+                      </div>
                     </div>
                   ) : null}
-                </div>
-              );
-            })}
+                </div> 
+                
+              ); 
+              
+            })} 
+            </div>
           </div>
         ) : null}
       </div>

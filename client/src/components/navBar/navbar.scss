@@ -1,0 +1,47 @@
+@use '../partials/mixins' as *; 
+@use '../partials/variables' as *;
+
+
+.navbar{ 
+    color: white;
+    font-family: customheader; 
+    display: flex; 
+    justify-content: space-between; 
+    padding: .5rem 1rem; 
+    position: relative ;
+    background-color: $themePink;
+    height: 200px;
+    width:100%; 
+    box-sizing: border-box;
+    z-index: 0; 
+    align-content: center;
+    box-shadow: 5px 6px 3px 10px rgba(19, 24, 44, 0.2); 
+    &__upper{ 
+        display: flex; 
+        justify-content: space-between; 
+        width: 100%; 
+        height: fit-content;
+        align-items: center;
+    }
+    &__inner{ 
+        display: flex; 
+        height: fit-content; 
+        align-items: center; 
+       
+    }
+    &__header{ 
+        font-size: 1.3rem;
+        font-family: customFitnessHeader; 
+        height: fit-content;
+        
+    } 
+    &__user{ 
+        font-size: 1rem;
+        vertical-align: middle;
+    } 
+    &__item{ 
+        font-size: .8rem;
+        margin-right: .5rem;
+        margin-left: .5rem;
+    }
+} 

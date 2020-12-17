@@ -31,14 +31,14 @@
         "name": "Outside/nature walk",
         "description": "life is too short not to enjoy the Great Outdoors! Go for a walk outside and enjoy nature, the city, or wherever you are!",
         "outdoor": true,
-        "indoor": false, 
+        "indoor": false,
         "gym": false
       },
       {
         "name": "Tredmill walk",
         "description": "Weather not co-operating? Fear not, you can always walk on a tredmill at home or at your local gym!",
         "outdoor": true,
-        "indoor": false, 
+        "indoor": false,
         "gym": true
       }
     ]
@@ -51,15 +51,22 @@
     "gym_required": false,
     "directions": "Make sure you take the proper safety precautions and have proper equiptment! Enjoy a walk along a trail or nature path!",
     "avgCalBurn": 400,
-    "variations": [],
-    "outdoor": true, 
-    "indoor": false, 
+    "variations": [
+      {
+        "name": "Outside Hike",
+        "description": "Hiking on a path or trail outside!",
+        "outdoor": true,
+        "indoor": false,
+        "gym": false
+      }
+    ],
+    "outdoor": true,
+    "indoor": false,
     "gym": false
-    
   },
   {
     "id": "c03",
-    "name": "cycling",
+    "name": "Cycling",
     "intensity": "high",
     "description": "Wiki: Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport.Can also be done in the gym or at home on an excercise bike",
     "gym_required": false,
@@ -77,7 +84,6 @@
         "description": "Ride in style and learn cool tricks!",
         "outdoor": true,
         "indoor": false
-        
       },
       {
         "name": "Mountain biking",
@@ -89,7 +95,7 @@
   },
   {
     "id": "c04",
-    "name": "skateboarding/ longboarding",
+    "name": "Skateboarding/ Longboarding",
     "intensity": "medium",
     "description": "Wiki:Skateboarding is an action sport that involves riding and performing tricks using a skateboard, as well as a recreational activity, an art form, an entertainment industry job, and a method of transportation",
     "gym_required": false,
@@ -97,7 +103,7 @@
     "avgCalBurn": 350,
     "variations": [
       {
-        "name": "street/vert skateboarding",
+        "name": "Street/Vert Skateboarding",
         "description": "Wiki: Street skateboarding is a skateboarding discipline which focuses on flatground tricks, grinds, slides and aerials within urban environments and public spaces/n Wiki: Vert skateboarding, short for vertical skateboarding, is the act of riding a skateboard on a skate ramp or other incline and involves the skateboarder transitioning from the horizontal plane to the vertical plane in order to perform skateboarding tricks ",
         "outdoor": true,
         "indoor": false
@@ -108,7 +114,6 @@
         "outdoor": true,
         "indoor": false
       }
-      
     ]
   },
   {
